@@ -1,1 +1,1 @@
-(WIP) My new portfolio site, written in TypeScript with Astro & Preact :)
+WIP

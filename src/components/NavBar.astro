@@ -1,0 +1,88 @@
+---
+export interface Props {
+    name: string;
+}
+
+const { name } = Astro.props;
+
+const links: {
+    name: string;
+    href: string;
+}[] = [
+    {
+        name: "github.",     
+        href: "https://github.com/tsdenouden"
+    },
+    {
+        name: "behance.",
+        href: "https://github.com/tsdenouden"
+    },
+    {
+        name: "youtube.",
+        href: "https://github.com/tsdenouden"
+    },
+    {
+        name: "contact.",
+        href: "#contact"
+    }
+]
+---
+
+<div class="container">
+    <nav class="navBar">
+        <h3 class="name">
+            {name}
+        </h3>
+        <ul class="links">
+            {links.map(link => 
+                <li>
+                    <a 
+                        href={link.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        {link.name}
+                    </a>
+                </li>
+            )}
+        </ul>
+    </nav>
+</div>
+
+<style>
+    .container {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1;
+    }
+
+    @media all and (max-width: 1200px) {
+        .container {
+            display: none;
+        }
+    }
+
+    .navBar {
+        display: flex;
+        justify-content: space-between;
+        background-color: rgba(255,255,255,0.9);
+        backdrop-filter: blur(2px);
+        padding: 2px;
+    }
+
+    .name {
+        font-weight: bold;
+        margin-left: 20px;
+    }
+
+    .links {
+        display: flex;
+    }
+
+    .links > li > a {
+        color: darkcyan;
+        font-weight: bold;
+        margin-inline: 20px;
+    }
+</style>
