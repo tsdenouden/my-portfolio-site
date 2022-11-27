@@ -11,19 +11,19 @@ const NavBar = ({name}: Props) => {
         href: string;
     }[] = [
         {
-            name: "github",     
+            name: "github.",     
             href: "https://github.com/tsdenouden"
         },
         {
-            name: "behance",
+            name: "behance.",
             href: "https://github.com/tsdenouden"
         },
         {
-            name: "youtube",
+            name: "youtube.",
             href: "https://github.com/tsdenouden"
         },
         {
-            name: "contact",
+            name: "contact.",
             href: "#contact"
         }
     ]

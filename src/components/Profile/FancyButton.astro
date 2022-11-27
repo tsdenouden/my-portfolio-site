@@ -1,6 +1,4 @@
 ---
-import Link from '../Link.astro';
-
 export interface Props {
     href: string;
 }
@@ -9,7 +7,7 @@ const { href } = Astro.props;
 ---
 
 <div>
-    <button class="projectsButton">
+    <button class="fancy">
         <a 
             href={href}
             target="_blank"
@@ -21,34 +19,34 @@ const { href } = Astro.props;
 </div>
 
 <style>
-.projectsButton {
-    background-color: lightcyan;
-    border: 3px solid cyan;
-    border-radius: 15px 50px;
-    padding: 8px 20px 8px 20px;
-    transition-duration: 300ms;
-    transition-timing-function: ease-in-out;
-    margin: 5px;
-    margin-top: 10px;
-}
-
-.projectsButton > a {
-    color: darkslategray;
-    font-size: 1.5vw;
-    user-select: none;
-}
-
-.projectsButton:hover {
-    background-color: cyan;
-    border: 3px solid lightcyan;
-}
-
-@media all and (max-width: 1200px) {
-    .projectsButton{
-        text-align: center;
+    .fancy {
+        background-color: lightcyan;
+        border: 3px solid cyan;
+        border-radius: 15px 50px;
+        padding: 8px 20px 8px 20px;
+        transition-duration: 300ms;
+        transition-timing-function: ease-in-out;
+        margin: 5px;
+        margin-top: 10px;
     }
-    .projectsButton > a {
-        font-size: 30px;
+
+    .fancy > a {
+        color: darkslategray;
+        font-size: 1.5vw;
+        user-select: none;
     }
-}
+
+    .fancy:hover {
+        background-color: cyan;
+        border: 3px solid lightcyan;
+    }
+
+    @media all and (max-width: 1200px) {
+        .fancy {
+            text-align: center;
+        }
+        .fancy > a {
+            font-size: 30px;
+        }
+    }
 </style>
