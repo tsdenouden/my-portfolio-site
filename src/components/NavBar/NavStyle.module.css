@@ -1,0 +1,35 @@
+.container {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+@media all and (max-width: 1200px) {
+    .container {
+        display: none;
+    }
+}
+
+.navBar {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgba(255,255,255,0.9);
+    backdrop-filter: blur(2px);
+    padding: 8px;
+}
+
+.name {
+    font-weight: bold;
+    margin-left: 20px;
+}
+
+.links {
+    display: flex;
+}
+
+.links > li > a {
+    color: darkcyan;
+    font-weight: bold;
+    margin-inline: 20px;
+}

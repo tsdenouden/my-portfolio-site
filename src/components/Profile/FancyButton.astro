@@ -1,0 +1,54 @@
+---
+import Link from '../Link.astro';
+
+export interface Props {
+    href: string;
+}
+
+const { href } = Astro.props;
+---
+
+<div>
+    <button class="projectsButton">
+        <a 
+            href={href}
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            <slot />
+        </a>
+    </button>
+</div>
+
+<style>
+.projectsButton {
+    background-color: lightcyan;
+    border: 3px solid cyan;
+    border-radius: 15px 50px;
+    padding: 8px 20px 8px 20px;
+    transition-duration: 300ms;
+    transition-timing-function: ease-in-out;
+    margin: 5px;
+    margin-top: 10px;
+}
+
+.projectsButton > a {
+    color: darkslategray;
+    font-size: 1.5vw;
+    user-select: none;
+}
+
+.projectsButton:hover {
+    background-color: cyan;
+    border: 3px solid lightcyan;
+}
+
+@media all and (max-width: 1200px) {
+    .projectsButton{
+        text-align: center;
+    }
+    .projectsButton > a {
+        font-size: 30px;
+    }
+}
+</style>
