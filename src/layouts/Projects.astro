@@ -1,0 +1,39 @@
+---
+export interface Props {
+    header: string;
+}
+
+const { header } = Astro.props;
+---
+
+<section id="projects">
+    <h1 class="header">
+        {header}
+    </h1>
+    <ul class="list-projects">
+        <slot />
+    </ul>
+</section>
+
+<style>
+    .header {
+        font-size: 50px;
+        margin-left: 30px;
+        padding-top: 125px;
+    }
+
+    .list-projects {
+        margin-inline: 40px;
+    }
+
+    @media all and (max-width: 1200px) {
+        .header {
+            font-size: 40px;
+            padding-top: 30px;
+        }
+
+        .list-projects {
+            margin-inline: 10px;
+        }
+    }
+</style>

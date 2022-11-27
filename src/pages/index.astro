@@ -1,10 +1,12 @@
 ---
 // Portfolio Layout
 import Portfolio from "../layouts/Portfolio.astro";
+import Projects from "../layouts/Projects.astro";
 
 // Components
-import NavBar from "../components/NavBar.astro";
-import Profile from "../components/Profile.astro";
+import NavBar from "../components/NavBar/NavBar";
+import Profile from "../components/Profile/Profile";
+import Project from "../components/Project/Project";
 ---
 
 <Portfolio title="Tristan's Portfolio">
@@ -18,4 +20,152 @@ import Profile from "../components/Profile.astro";
 		app development, science, music, UI/UX & developer tools. I aim to deepen my understanding in various 
 		areas of technology & product development.
 	</Profile>
+	<Projects header="Projects">
+		<Project
+			title="PolyQuiz"
+			subtitle="a quiz generator web app"
+			year={2022}
+			tools={['React', 'Redux', 'MaterialUI', 'Express', 'Node.js', 'MongoDB']}
+			github="https://github.com/tsdenouden/PolyQuiz"
+		>
+			<article>
+				<p>
+					A quiz generator web app where students can convert their study sets into randomly generated quizzes.
+					Explore the latest study sets made by other students, publish a study set of your own & showcase
+					your study sets in your profile.
+				</p>
+				<p>
+					For this project, I chose to use React, Redux & MaterialUI for the frontend. For the backend, 
+					I wrote a simple REST API in Express to interface with my MongoDB cluster. I also utilised 
+					the Google OAuth2.0 protocol for authorising & authenticating users. To deploy 
+					this app, I used render.com's free tier for web services.
+				</p>
+			</article>
+		</Project>
+		<Project
+			title="Enoto"
+			subtitle="a web-based Markdown editor"
+			year={2022}
+			grade={100}
+			tools={['Flask', 'Tailwind', 'PIL', 'PythonMarkdown API', 'Heroku']}
+			github="https://github.com/tsdenouden/enoto-markdown"
+		>
+			<article>
+				<p>
+					A Markdown-based web app for creating simple websites and documents. Enoto features a text editor, 
+					a tool to insert Markdown snippets, a theme editor, support for exporting to different file formats, and the 
+					option to upload Markdown files. 
+				</p>
+				<p>
+					Enoto supports Markdown syntax such as lists, images, tables, etc. Enoto is 
+					also fully responsive and works on mobile. I decided to use the PythonMarkdown API for the parser, and the theme 
+					editor uses a Python module I wrote for generating basic CSS stylesheets.
+				</p>
+			</article>
+		</Project>
+		<Project
+			title="macOS-web"
+			year={2022}
+			tools={['React', 'Styled components']}
+			github="https://github.com/tsdenouden/web-macos-clone"
+		>
+			<article>
+				<p>
+					I'm currently working on a clone of Apple's macOS for the web, recreating its interface
+					and some of its basic functions. 
+				</p>
+			</article>
+		</Project>
+		<Project
+			title="Portfolio Website"
+			year={2022}
+			tools={['TypeScript', 'Astro', 'Preact']}
+			github="https://github.com/tsdenouden/my-portfolio-site"
+		>
+			<article>
+				<p>
+					My portfolio static site, written in TypeScript with Astro & Preact.
+				</p>
+			</article>
+		</Project>
+		<Project
+			title="Photo Filter App"
+			year={2022}
+			grade={100}
+			tools={['C']}
+			github="https://github.com/tsdenouden/miscProjects/tree/main/filter-more"
+		>
+			<article>
+				<p>
+					A program that consists of a few bitmap image processing algorithms written in the C programming 
+					language. Including Grayscale, Reflect, Blur & Edge detection filters. It uses a CLI interface and receives 
+					input from the user to determine the location of the source image to be manipulated and the file destination 
+					for the output. 
+				</p>
+				<p>
+					The edge detection filter is my implementation of the Sobel operator algorithm which works by 
+					estimating the first derivative of an image by doing a convolution between an input and two special kernels, 
+					one to detect vertical edges and one to detect horizontal edges.
+				</p>
+			</article>
+		</Project>
+		<Project
+			title="PSC Interpreter"
+			year={2022}
+			tools={['Python']}
+			github="https://github.com/tsdenouden/psc-compiler"
+		>
+			<article>
+				<p>
+					An interpreter for Cambridge's "Pseudocode" language taught to A Level students.
+					Despite this language being called pseudocode, it has quite a strict syntax. Since there
+					was no official compiler or interpreter for this language, I decided to write my own. 
+					It's currently in development.
+				</p>
+				<p>
+					<b>Currently implemented features:</b>
+					Variable declaration with types, Constants, Assignment, I/O, Expressions,
+					If statements & Nested ifs. The interpreter also sends out simple error messages with hints
+					on where the programmer went wrong. For example, it can report an undeclared variable being used in an if statement's condition
+					and let the programmer know at which line the if statement is located at.
+				</p>
+			</article>
+		</Project>
+		<Project
+			title="Stocks Web App"
+			year={2022}
+			grade={96}
+			tools={["Flask", "Bootstrap", "SQLite3", "IEX Cloud Core Data API"]}
+			github="https://github.com/tsdenouden/miscProjects/tree/main/finance"
+		>
+			<article>
+				<p>
+					A stock-trading app with real prices fetched from the IEX Cloud Core Data API. Users can
+					create an account and login to quote, buy or sell a stock. They can view all their stocks in their 
+					account's portfolio & keep track of their actions in the transaction history.
+				</p>
+				<p>
+					The app's backend is written in Flask and I used Bootstrap's CSS component library for quick 
+					frontend development. The databases were designed in the SQLite3 database engine.
+				</p>
+			</article>
+		</Project>
+		<Project
+			title="Recipe REST API"
+			year={2022}
+			tools={['FastAPI', 'Pydantic']}
+			github="https://github.com/tsdenouden/recipeRESTAPI"
+		>
+			<article>
+				<p>
+					This Recipes API helps you store the recipes of your favourite dishes alongside images & extra descriptions. 
+					The purpose of this project was to learn and practise building a REST API. I learnt about RESTful API guidelines, HTTP 
+					requests & status codes and testing API endpoints with a REST Client (Postman & SwaggerUI). 
+				</p>
+				<p>
+					I used FastAPI to build this project and SwaggerUI for the documentation website.
+				</p>
+			</article>
+		</Project>
+	</Projects>
 </Portfolio>
