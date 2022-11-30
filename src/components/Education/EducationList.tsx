@@ -18,7 +18,7 @@ const EducationList = () => {
 
     const certs = [
         {
-            title: 'Full Stack open',
+            title: 'Full Stack open 2022',
             school: 'University of Helsinki',
             date: '2022-Present'
         },
