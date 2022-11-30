@@ -7,6 +7,7 @@ import Projects from "../layouts/Projects.astro";
 import NavBar from "../components/NavBar/NavBar";
 import Profile from "../components/Profile/Profile";
 import Project from "../components/Project/Project";
+import EducationList from "../components/Education/EducationList";
 ---
 
 <Portfolio title="Tristan's Portfolio">
@@ -68,8 +69,9 @@ import Project from "../components/Project/Project";
 		<Project
 			title="macOS-web"
 			year={2022}
-			tools={['React', 'Styled components']}
+			tools={['React']}
 			github="https://github.com/tsdenouden/web-macos-clone"
+			imgSrc="/macos.png"
 		>
 			<article>
 				<p>
@@ -152,8 +154,8 @@ import Project from "../components/Project/Project";
 					account's portfolio & keep track of their actions in the transaction history.
 				</p>
 				<p>
-					The app's backend is written in Flask and I used Bootstrap's CSS component library for quick 
-					frontend development. The databases were designed in the SQLite3 database engine.
+					The app's backend is written in Flask and I used Bootstrap's CSS component library. 
+					The databases were designed in the SQLite3 database engine.
 				</p>
 			</article>
 		</Project>
@@ -176,4 +178,5 @@ import Project from "../components/Project/Project";
 			</article>
 		</Project>
 	</Projects>
+	<EducationList />
 </Portfolio>

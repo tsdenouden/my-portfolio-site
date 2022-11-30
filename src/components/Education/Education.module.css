@@ -1,0 +1,63 @@
+.education {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    width: 40%;
+    padding-left: 30px;
+    padding-right: 50px;
+    margin-left: 15px;
+    margin-bottom: 20px;
+}
+
+@media all and (max-width: 1200px) {
+    .education {
+        width: 90%;
+    }
+}
+
+.education > h1 {
+    font-size: 50px;
+}
+
+.education > h2 {
+    font-size: 25px;
+    font-weight: bold;
+    text-decoration: underline;
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
+
+.education > ul {
+    margin-left: 20px;
+}
+
+.education > ul  * {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1px;
+}
+
+.title {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.subtitle {
+    font-size: 18px;
+}
+
+.date {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.school {
+    font-size: 18px;
+    color: darkcyan;
+    margin-bottom: 10px;
+}
